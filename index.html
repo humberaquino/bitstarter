@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>TGM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -99,7 +99,10 @@
       }
     </style>
   </head>
-  <body>      
+  <body>
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -116,33 +119,45 @@
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <div class="container">        
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
           <h1>The Give Machine</h1>
         </div>
       </div> 
-        
       <div class="row-fluid subheading">
         <div class="span12">
-          <p class="lead">The link between what a person <b>really wants</b> 
-              and your willingness to <b>give</b> them exactly that.</p>
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">The link between what a person <b>really wants</b>
+	    and your willingness to <b>give</b> them exactly that.</p>
         </div>
       </div>
-        
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://i.imgur.com/CakUfKu.png"/>
+          <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/CakUfKu.png">
         </div>
+
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
                 <div class="linediv-l">
                 <h3>0</h3> <p>backers</p>
                 </div>
@@ -159,54 +174,75 @@
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 0%;"></div>
-              <div class="bar bar-warning" style="width: 0%;"></div>
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/x6qpYWF.png">
+          <img class="img-polaroid"  alt="Placeholder" src="http://i.imgur.com/x6qpYWF.png">
         </div>
         <div class="span5 copy">
           <p>
-           Have you ever <b>wished</b> to receive something but you end up getting another thing? <br/>
-           Or wanted to <b>give</b> a great present to your love one and didn't figure it out what could that gift be?<br/>
-           You probably did, until now. <b>The Give Machine</b> is the easiest way to <b>share the love by giving exactly what the other person wants!</b>
+            Have you ever <b>wished</b> to receive something but you end up getting another thing? <br/>
+            Or wanted to <b>give</b> a great present to your love one and didn't figure it out what could that gift be?<br/>
+            You probably did, until now. <b>The Give Machine</b> is the easiest way to <b>share the love by giving exactly what the other person wants!</b>
           </p>
         </div>
       </div>
 
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>             
-            <b>But, how does it work?</b> 
+          <p>
+	    <b>But, how does it work?</b>
             <br/>On your smartphone, you use TGM to make wishes that your friends and followers will know about.<br/>
             In case you wish can be buyable, your friend could buy parts of your wish until they <b>make it come true!</b><br/>
-            For thinks that money can't buy, you could specify what other people have to do to complete your wish :D            
+            For thinks that money can't buy, you could specify what other people have to do to complete your wish :D
           </p>
-            <p>
-                <em>
-                The nice think about TGM is that it connect us in a deeper, more fundamental level, a level at which we stop being isolated and we start creating bonds by making our dreams come true, together.  
-                </em>
-            </p>
+	  <p>
+            <em>
+              The nice think about TGM is that it connect us in a deeper, more fundamental level, a level at which we stop being isolated and we start creating bonds by making o\
+ur dreams come true, together.
+            </em>
+          </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/goxBtIq.png">
+          <img class="img-polaroid"  alt="Placeholder" src="http://i.imgur.com/goxBtIq.png">
         </div>
       </div>
 
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
           <div class="span10 offset1">
             <h3>FAQ</h3>
@@ -220,14 +256,16 @@
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    As soon as I receive them :)
+		    As soon as I receive them :)
                   </div>
                 </div>
-              </div>             
+              </div>
             </div>
           </div>
+
       </div>
 
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
       <!-- http://creativecommons.org/licenses/ -->
       <div class="row-fluid footer">
         <div class="span12">
